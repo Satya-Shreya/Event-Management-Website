@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo1.png" type="image/icon type">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="images/logo1.png" type="image/icon type">
+</head>
+<header>
+    <nav class="navbar" >
+        <span class="n" id="l"><a href="login.html" target="_blank" rel="noopener noreferrer">LOGIN</a></span>
+        <span class="n"id=h><a href="homepage.html">HOME</a></span>
+        <span class="n" id="logo"><img src="images/logo1.png" id="i"></span>
+        <span class="n" id="c"><a href="contact.html"target="_blank" rel="noopener noreferrer">CONTACT</a></span>
+        <span class="n" id="a"><a href="about.html"target="_blank" rel="noopener noreferrer">ABOUT</a></span>
+    </nav>
+
+</header>
+<body>
+    <section>
+        <img src="images/form_plain.jpg" alt="" class="bg">
+        <img src="images/girl.jpeg" class="girl" alt="">
+        
+        <div class="login">
+            <h2>Sign In</h2>
+            <div class="inputBox">
+                <input type="text" placeholder="Username" id="em">
+            </div>
+            <div class="inputBox">
+                <input type="password" placeholder="Password" id="pass">
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login" id="btn" onclick="validate()">
+            </div>
+            <div class="group">
+                <a href="#">Forget password</a>
+                <a href="#">SignUp</a>
+            </div>
+        </div>            
+        
+    </section>
+    <script>
+        function validate(){
+        var em=document.getElementById("em").value;
+        var pass=document.getElementById("pass").value;
+        var email="shreya@gmail.com";
+        var password="shreya009";
+        if(em===email&&pass===password){
+            alert("Login successful")
+            window.location.href="homepage.html";
+
+        }
+        else{
+            alert("User name already taken");
+            document.getElementById("em").value="";
+            document.getElementById("pass").value="";
+        }
+    }
+    </script>
+</body>
+</html>
+
+
+
